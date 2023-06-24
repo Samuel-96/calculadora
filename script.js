@@ -8,15 +8,11 @@ const botones = document.querySelectorAll("button");
 
 
 // EVENT LISTENERS
-if (mobileBrowser){
-    botones.forEach(boton => {
-        boton.addEventListener("touchstart", mostrarEnPantalla);
-    });
-}else{
-    botones.forEach(boton => {
-        boton.addEventListener("click", mostrarEnPantalla);
-    });
-}
+
+botones.forEach(boton => {
+    boton.addEventListener("click", mostrarEnPantalla);
+    boton.addEventListener("touchstart", mostrarEnPantalla);
+});
 
 
 // FUNCIONES QUE INTERACTUAN CON LA INFO DE LA CALCULADORA
